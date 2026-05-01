@@ -936,8 +936,8 @@
         });
         
         let aoa = [
-            ["HỘ, CÁ NHÂN KINH DOANH: CLB TAEKWONDO Tùng Bách", "", "Mẫu số S1a-HKD"],
-            ["Địa chỉ: Phường Quy Nhơn, Gia Lai", "", "(Kèm theo Thông tư số 152/2025/TT-BTC\nngày 31 tháng 12 năm 2025 của Bộ trưởng\nBộ Tài chính)"],
+            ["HỘ, CÁ NHÂN KINH DOANH: CLB TAEKWONDO TÙNG BÁCH", "", "Mẫu số S1a-HKD"],
+            ["Địa chỉ: Thôn 1 - xã Thuận Châu - tỉnh Sơn La", "", "(Kèm theo Thông tư số 152/2025/TT-BTC\nngày 31 tháng 12 năm 2025 của Bộ trưởng\nBộ Tài chính)"],
             ["Mã số thuế: ..............................", "", ""],
             ["", "", ""],
             ["SỔ CHI TIẾT DOANH THU BÁN HÀNG HÓA, DỊCH VỤ", "", ""],
@@ -1619,7 +1619,7 @@
         try {
             const node = document.getElementById('receiptTemplate'); const cleanName = name.trim();
             document.getElementById('r_name').innerText = cleanName.toUpperCase(); document.getElementById('receiptTitle').innerText = receiptTitle;
-            const dParts = date ? date.split('-') : []; document.getElementById('r_date_top').innerText = dParts.length === 3 ? `Quy Nhơn, ngày ${dParts[2]} tháng ${dParts[1]} năm ${dParts[0]}` : `Quy Nhơn, ${formatDate(date)}`;
+            const dParts = date ? date.split('-') : []; document.getElementById('r_date_top').innerText = dParts.length === 3 ? `Thuận Châu, ngày ${dParts[2]} tháng ${dParts[1]} năm ${dParts[0]}` : `Thuận Châu, ${formatDate(date)}`;
             const p = allProfiles[cleanName] || {}; document.getElementById('r_belt').innerText = p.belt || (cleanName.includes('&') ? 'Theo danh sách' : 'Chưa cập nhật'); 
             if (p.dob && !cleanName.includes('&')) { document.getElementById('r_dob').innerText = formatDate(p.dob); document.getElementById('r_dob_wrap').style.display = 'block'; } else document.getElementById('r_dob_wrap').style.display = 'none';
             document.getElementById('r_amount').innerText = amount.toLocaleString('vi-VN') + " ₫"; document.getElementById('r_amount_words').innerText = docTienVND(amount); 
