@@ -544,7 +544,7 @@
     const invRef = collection(db, "tst_inventory");
     window.forceRender = renderApp;
 
-    const BANK_ID = "AGRIBANK"; const ACCOUNT_NO = "108880450814"; const ACCOUNT_NAME = "PHAM QUANG TUNG - CLB TAEKWONDO TÙNG BÁCH"; 
+    const BANK_ID = "VIETINBANK"; const ACCOUNT_NO = "108880450814"; const ACCOUNT_NAME = "PHAM QUANG TUNG - CLB TAEKWONDO TÙNG BÁCH"; 
     function removeVietnameseTonesForQR(str) { return str ? str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D') : ""; }
     function generateVietQR(amount, studentName, detailDesc) { const cName = removeVietnameseTonesForQR(studentName).replace(/\s+/g, '%20'); const cDesc = removeVietnameseTonesForQR(detailDesc).replace(/\s+/g, '%20').replace(/\//g, '-'); const accName = removeVietnameseTonesForQR(ACCOUNT_NAME).replace(/\s+/g, '%20'); return `https://img.vietqr.io/image/${BANK_ID}-${ACCOUNT_NO}-compact2.jpg?amount=${amount}&addInfo=${cName}%20${cDesc}&accountName=${accName}`; }
 
